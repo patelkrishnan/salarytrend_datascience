@@ -3,6 +3,7 @@ title: 'Unlocking Insights: Exploring Salary Dynamics and Employment Trends in D
 author: "Krishna Patel"
 date: "February 25, 2024"
 output:
+  pdf_document: default
   html_document:
     code_download: yes
     fig_caption: yes
@@ -12,11 +13,8 @@ output:
     df_print: kable
     toc_float:
       collapsed: no
-  pdf_document:
-    toc: yes
-    toc_depth: '2'
-    always_allow_html: true
 ---
+
 ```{r, message=FALSE}
 # Required packages for our course. Do not delete.
 library(tidyverse)
@@ -58,7 +56,7 @@ In the subsequent sections of this report, we delve deeper into each research qu
 
 ```{r}
 # import the dataset
-jobs_in_data <- read.csv("~/Desktop/BIOINFORMATICS_MS/Semester_IV/INSH5302/Project2/jobs_in_data.csv")
+jobs_in_data <- read.csv("~/Downloads/github/salarytrend_datascience/jobs_in_data.csv")
 # filter to include 25 random countries out of 83
 set.seed(123)
 selected_data <- jobs_in_data[, c("work_year", "job_title", "salary_in_usd", "experience_level", "employee_residence")]
